@@ -50,3 +50,13 @@ Where is:
 
 See result!
 
+
+
+## Authors
+
+* **Nifanin Konstantin**
+* **Malinin Ivan**
+
+## Links
+
+* [Source code](https://github.com/Piknik1990/urlina)
