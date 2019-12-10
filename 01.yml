@@ -1,0 +1,8 @@
+urls:
+  - url: https://yandex.ru/search?text=123456780&clid=2186621
+    code: 200
+    method: POST
+  - url: https://yandex.ru/search?text=123456780&clid=2186621
+    code: 200
+    method: QWERTY
+  - url: https://yandex.ru/search?text=123456780&clid=2186621
