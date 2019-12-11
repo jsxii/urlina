@@ -14,7 +14,7 @@ def usage():
 
 	%s <file> [-s] [-c] [-r] [-d] [-txx]
         <file>      YAML файл со списком адресов.
-        -s          Продолжать при несовпадении ожидаемого и реального кода ответа сервера.
+        -s          Продолжать при несовпадении ожидаемого и реального кода ответа сервера или ошибке запроса.
         -c          Проверять сертификат сервера при HTTPS запросе.
         -r          Добавлять в заголовок поле Referer, равный адресу запроса.
         -d          Вывод отладочной информации.
@@ -120,7 +120,7 @@ def test_url(reqs):
                 if debug: print "[%s: %s]" % (type(exc).__name__, str(exc))
                 exit(1)
             else:
-                print "ERROR\tОшибка выполнения запроса для '%s'." % req['url']
+                print "ERROR\tОшибка выполнения запроса для '%s::%s'." % (req['method'], req['url'])
                 if debug: print "[%s: %s]" % (type(exc).__name__, str(exc))
         if str(response.status_code) != str(req['code']):
             if not ignore:
